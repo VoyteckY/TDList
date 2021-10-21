@@ -14,12 +14,18 @@ export class AppComponent {
     if (this.inputText.length !== 0) {
       this.activeList.push(this.inputText)
       this.inputText = "";
-    // } else {
-    //   return alert('Wprowadź najpierw temat zadania do wykonania!')
+    } else {
+      return alert('Wprowadź najpierw temat zadania do wykonania!')
     }
   }
-  remove(){}
+  remove(task:string){
+    //Sprawdzić metode forEach
+   this.activeList = this.activeList.filter(e=>e !== task); 
+  }
   done(){}
+  color(){
+    return alert('Choice Color-style')
+  }
 }
 
 
