@@ -2,3 +2,6 @@
 body{
     background-image: url('/assets/black_1920.jpg');
 }
+li{
+    list-style: none;
+}

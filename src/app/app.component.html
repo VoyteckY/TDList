@@ -7,32 +7,46 @@
   <div class="input">
     <input type="text" [(ngModel)]="inputText" (keyup.enter)="add()">
     <button (click)="add()">Add task</button>
-    <div class="color" (click)="color()"></div>
+    <div class="color" (click)="color()"></div> 
   </div>
 
   <div class="container">
 
+    <div class="tasks">
+      <div class="name">
+        <p>To do</p>
+        <div class="score">{{tasksList.length}}</div>
+      </div>
+      <ul>
+        <li *ngFor="let task of tasksList">
+          <button (click)="done(task)"><i class="far fa-check-square"></i></button>
+          {{task | upper}}
+          <button (click)="remove(task)"><i class="fas fa-trash-alt"></i></button>
+        </li>
+      </ul>
+    </div>
     <div class="active">
       <div class="name">
-        <p>Aktywne zadania</p>
+        <p>Active</p>
         <div class="score">{{activeList.length}}</div>
       </div>
       <ul>
         <li *ngFor="let task of activeList">
-          {{task}}
-          <button (click)="remove(task)">Rem</button>
+          <button (click)="done(task)"><i class="far fa-check-square"></i></button>
+          {{task | upper}}
+          <button (click)="remove(task)"><i class="fas fa-trash-alt"></i></button>
         </li>
       </ul>
     </div>
 
     <div class="done">
       <div class="name">
-        <p>Zadania wykonane</p>
+        <p>Done</p>
         <div class="score">{{doneList.length}}</div>
       </div>
 
       <ul>
-        <li *ngFor="let task of doneList">
+        <li class='LiDone' *ngFor="let task of doneList">
           {{task}}
         </li>
       </ul>
