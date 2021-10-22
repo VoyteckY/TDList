@@ -20,21 +20,33 @@ export class AppComponent implements OnInit {
 
   add() {
     if (this.inputText.length !== 0) {
-      this.activeList.push(this.inputText)
+      this.tasksList.push(this.inputText)
       this.inputText = "";
     } else {
       return alert('Wprowadź zadania do wykonania!')
     }
   }
+
   remove(task: string) {
-    //Sprawdzić metode forEach
-    this.activeList = this.activeList.filter(e => e !== task);
-    this.tasksList = this.tasksList.filter(e => e !== task);
+    const index1: number = this.activeList.indexOf(task);
+    if (index1 !== -1) {
+      this.activeList.splice(index1, 1);
+    }
+    const index2: number = this.tasksList.indexOf(task);
+    if (index2 !== -1) {
+      this.tasksList.splice(index2, 1);
+    }
   }
+
   done(task: string) {
     this.doneList.push(task)
     this.remove(task)
   }
+
+  active(task: string) {
+    this.activeList.push(task);
+  }
+
   color() {
     //Naciśnięcie tego powoduje zmiane koloru czcionki
     //
