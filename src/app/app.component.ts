@@ -60,7 +60,7 @@ export class AppComponent implements OnInit {
 
   color() {
     //Naciśnięcie tego powoduje zmiane koloru czcionki
-    // return alert('Choice Color-style')
+    return alert('Choice Color-style')
   }
 }
 

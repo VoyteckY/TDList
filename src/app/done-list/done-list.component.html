@@ -1,12 +1,20 @@
-<div class="done">
-    <div class="name">
-      <p>Done</p>
-      <div class="score" style="background: rgba(93, 160, 102, 0.45);">{{doneList.length}}</div>
-      <button class="clear" (click)="clear()"><i class="fas fa-trash-alt"></i></button>
+<div class="container">
+  <div class="row">
+    <div class="done">
+      <div class="title">
+        <p>Done</p>
+        <div class="number" style="background: rgba(93, 160, 102, 0.45);">
+          {{doneList.length}}
+        </div>
+        <div class="number clear" (click)="clear()" style="background: rgba(93, 160, 102, 0.45);">
+          <i class="fas fa-trash-alt"></i>
+        </div>
+      </div>
+      <ul>
+        <li class='LiDone' *ngFor="let task of doneList">
+          {{task |upper}}
+        </li>
+      </ul>
     </div>
-    <ul>
-      <li class='LiDone' *ngFor="let task of doneList">
-        {{task}}
-      </li>
-    </ul>
   </div>
+</div>
