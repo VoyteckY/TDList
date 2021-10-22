@@ -7,7 +7,7 @@ import { DoneListComponent } from './done-list/done-list.component';
 import { ActiveListComponent } from './active-list/active-list.component';
 import { FormsModule } from '@angular/forms';
 import { UpperPipe } from './upper.pipe';
-import { TaskListComponent } from './task-list/task-list.component';
+import { ToDoListComponent } from './todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { TaskListComponent } from './task-list/task-list.component';
     DoneListComponent,
     ActiveListComponent,
     UpperPipe,
-    TaskListComponent
+    ToDoListComponent
   ],
   imports: [
     BrowserModule,

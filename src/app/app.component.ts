@@ -30,6 +30,16 @@ export class AppComponent implements OnInit {
     }
   }
 
+  done(task: string) {
+    this.doneList.push(task)
+    this.removeActive(task)
+  }
+
+  active(task:string){
+    this.activeList.push(task);
+    this.removeToDo(task)
+  }
+
   removeToDo(task: string) {
     const index2: number = this.tasksList.indexOf(task);
     if (index2 !== -1) {
@@ -44,19 +54,12 @@ export class AppComponent implements OnInit {
     }
   }
 
-  done(task: string) {
-    this.doneList.push(task)
-    this.removeActive(task)
-  }
-
-  active(task:string){
-    this.activeList.push(task);
-    this.removeToDo(task)
+  clear(){
+    this.doneList = [];
   }
 
   color() {
     //Naciśnięcie tego powoduje zmiane koloru czcionki
-    
     return alert('Choice Color-style')
   }
 }
