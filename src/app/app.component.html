@@ -24,7 +24,7 @@
         <li *ngFor="let task of tasksList">
           <button (click)="active(task)" style="color: rgb(248, 145, 10);"><i class="far fa-square"></i></button>
           {{task | upper}}
-          <button (click)="remove(task)"><i class="fas fa-trash-alt"></i></button>
+          <button (click)="removeToDo(task)"><i class="fas fa-trash-alt"></i></button>
         </li>
       </ul>
     </div>
@@ -39,7 +39,7 @@
         <li *ngFor="let task of activeList">
           <button (click)="done(task)"  style="color: rgb(93, 160, 102);"><i class="far fa-square"></i></button>
           {{task}}
-          <button (click)="remove(task)"><i class="fas fa-trash-alt"></i></button>
+          <button (click)="removeActive(task)"><i class="fas fa-trash-alt"></i></button>
         </li>
       </ul>
     </div>
