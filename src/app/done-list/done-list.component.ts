@@ -7,10 +7,16 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class DoneListComponent implements OnInit {
 
+  @Input() doneList: string[] = [];
+  @Output() e = new EventEmitter<string>()
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  clear(){
+    this.e.emit()
+  }
+  
 }

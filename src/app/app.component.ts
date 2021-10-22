@@ -8,22 +8,22 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   doneList: string[] = [];
-  tasksList: Array<string> = [];
+  toDoList: Array<string> = [];
   activeList: Array<string> = [];
   colors: string[] = [];
   inputText: string = "";
   colorNumber: number = 0;
 
   ngOnInit() {
-    this.tasksList = ['Gotowanie', 'Mycie okien', 'Zakupy'];
+    this.toDoList = ['Gotowanie', 'Mycie okien', 'Zakupy'];
     this.activeList = ['Szukanie pracy', 'Nauka programowania'];
     this.doneList = ['Zrobić obiad'];
-    this.colors = ['rgba(224, 195, 27, 0.601)', 'rgba(255, 255, 255, 0.601)', 'rgba(57, 243, 72, 0.601)','rgba(206, 58, 58, 0.664)'] 
+    // this.colors = ['rgba(224, 195, 27, 0.601)', 'rgba(255, 255, 255, 0.601)', 'rgba(57, 243, 72, 0.601)','rgba(206, 58, 58, 0.664)'] 
   }
 
   add() {
     if (this.inputText.length !== 0) {
-      this.tasksList.push(this.inputText)
+      this.toDoList.push(this.inputText)
       this.inputText = "";
     } else {
       return alert('Wprowadź zadania do wykonania!')
@@ -41,13 +41,13 @@ export class AppComponent implements OnInit {
   }
 
   removeToDo(task: string) {
-    const index2: number = this.tasksList.indexOf(task);
+    const index2: number = this.toDoList.indexOf(task);
     if (index2 !== -1) {
-      this.tasksList.splice(index2, 1);
+      this.toDoList.splice(index2, 1);
     }
   }
   
-  removeActive(task: string) {
+  removeActive(task:string) {
     const index1: number = this.activeList.indexOf(task);
     if (index1 !== -1) {
       this.activeList.splice(index1, 1);
@@ -60,7 +60,7 @@ export class AppComponent implements OnInit {
 
   color() {
     //Naciśnięcie tego powoduje zmiane koloru czcionki
-    return alert('Choice Color-style')
+    // return alert('Choice Color-style')
   }
 }
 

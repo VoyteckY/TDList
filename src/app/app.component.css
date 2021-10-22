@@ -79,7 +79,7 @@ li{
   letter-spacing: 2px;
 }
 
-.tasks button, .active button, .tasks .far, .clear{
+.toDo button, .active button, .toDo .far, .clear{
   font-size: 25px;
   background-color: transparent;
   border: none;

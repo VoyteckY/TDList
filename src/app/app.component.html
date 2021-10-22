@@ -13,51 +13,12 @@
   </div>
 
   <div class="container">
-
     <!-- sekcja Zadań TO DO -->
-    <div class="tasks">
-      <div class="name">
-        <p>To do</p>
-        <div class="score" style="background: rgba(119, 244, 255, 0.45);">{{tasksList.length}}</div>
-      </div>
-      <ul>
-        <li *ngFor="let task of tasksList">
-          <button (click)="active(task)" style="color: rgb(248, 145, 10);"><i class="far fa-square"></i></button>
-          {{task | upper}}
-          <button (click)="removeToDo(task)"><i class="fas fa-trash-alt"></i></button>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Sekcja zadań ACTIVE -->
-    <div class="active">
-      <div class="name">
-        <p>Active</p>
-        <div class="score" style="background: rgba(248, 145, 10, 0.45);">{{activeList.length}}</div>
-      </div>
-      <ul>
-        <li *ngFor="let task of activeList">
-          <button (click)="done(task)"  style="color: rgb(93, 160, 102);"><i class="far fa-square"></i></button>
-          {{task}}
-          <button (click)="removeActive(task)"><i class="fas fa-trash-alt"></i></button>
-        </li>
-      </ul>
-    </div>
-
+    <app-todo-list [toDoList]="toDoList" (x)="removeToDo($event)" (z)="active($event)"></app-todo-list>
+    <!-- Sekcja zadań ACTIVE -->   
+    <app-active-list [activeList]="activeList" (q)="done($event)" (w)="removeActive($event)"></app-active-list>
     <!-- Seckja zadań DONE -->
-    <div class="done">
-      <div class="name">
-        <p>Done</p>
-        <div class="score" style="background: rgba(93, 160, 102, 0.45);">{{doneList.length}}</div>
-        <button class="clear" (click)="clear()"><i class="fas fa-trash-alt"></i></button>
-      </div>
-      <ul>
-        <li class='LiDone' *ngFor="let task of doneList">
-          {{task}}
-        </li>
-      </ul>
-    </div>
-
+    <app-done-list [doneList]="doneList" (e)="clear()"></app-done-list>
   </div>
 
 </div>

@@ -1,0 +1,12 @@
+<div class="done">
+    <div class="name">
+      <p>Done</p>
+      <div class="score" style="background: rgba(93, 160, 102, 0.45);">{{doneList.length}}</div>
+      <button class="clear" (click)="clear()"><i class="fas fa-trash-alt"></i></button>
+    </div>
+    <ul>
+      <li class='LiDone' *ngFor="let task of doneList">
+        {{task}}
+      </li>
+    </ul>
+  </div>
