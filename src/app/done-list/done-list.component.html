@@ -5,16 +5,16 @@
       {{doneList.length}}
     </div>
     <p>Done</p>
-    <!-- <div class="number clear" (click)="clear()" style="background: rgba(93, 160, 102, 0.45);">
-      <i class="fas fa-trash-alt"></i>
-    </div> -->
   </div>
-
+  
   <!-- Lista -->
-    <ul class="list">
-      <li class='LiDone' *ngFor="let task of doneList">
-        {{task |upper}}
-      </li>
-    </ul>
+  <ul class="list">
+    <li class='LiDone' *ngFor="let task of doneList">
+      {{task |upper}}
+    </li>
+  </ul>
+  <div class="clear" (click)="clear()">
+    <i class="fas fa-trash-alt"></i>
+  </div>
 
 </div>
