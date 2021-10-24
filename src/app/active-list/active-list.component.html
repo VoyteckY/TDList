@@ -8,13 +8,12 @@
   </div>
 
   <!-- Lista -->
-  <div class="list">
-    <ul>
+    <ul class="list">
       <li *ngFor="let task of activeList">
-        <button (click)="done(task)" style="color: rgb(93, 160, 102);"><i class="far fa-square"></i></button>
-        {{task | upper}}
-        <button (click)="removeActive(task)"><i class="fas fa-trash-alt"></i></button>
+        <button class='check' (click)="done(task)" style="color: rgb(93, 160, 102);"><i class="far fa-square"></i></button>
+        <span class="task">{{task | upper}}</span> 
+        <button class="remove" (click)="removeActive(task)"><i class="fas fa-trash-alt"></i></button>
       </li>
     </ul>
-  </div>
+ 
 </div>

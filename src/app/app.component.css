@@ -7,17 +7,14 @@
   min-height: 25vh;
   font-family: 'Amatic SC', cursive;
   color: rgba(0, 0, 0, 0.52);
-
 }
 
 .header h1 {
   font-size: 5em;
- 
 }
 
 .input {
   display: flex;
-  /* min-height: 50%; */
 }
 
 .input input {
@@ -27,18 +24,18 @@
   background-color: transparent;
   font-size: 35px;
   cursor: cell;
+  color: whitesmoke;
 }
 
 .input input:focus {
   caret-color: cornsilk;
   outline: none;
   border-bottom: 4px solid rgba(223, 219, 219, 0.438);
-  font-weight: 600;
-  color: whitesmoke;
 }
 
 .input button {
   border: 4px solid rgba(0, 0, 0, 0.705);
+  border-bottom: 4px saddlebrown rgba(0, 0, 0, 0.705);
   background-color: transparent;
   font-size: 35px;
   color: rgba(0, 0, 0, 0.705);
@@ -58,17 +55,117 @@
 }
 
 /* SECTION MAIN */
-section{
-  /* background-color: wheat; */
-  min-height: 70vh;
+section {
   display: flex;
   justify-content: space-evenly;
- align-items: center;
+  flex-wrap: wrap;
+  min-height: 70vh;
 }
 
 section>div {
-  background-color: rgba(236, 201, 85, 0.637);
   min-width: 24vw;
-  color: rgba(255, 255, 255, 0.89);
-  height: 200px;
+  color: rgba(255, 255, 255, 0.952);
 }
+
+/* MEDIA  */
+
+/* @media( max-width: 760px) and (orientation: portrait){
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1vw;
+    min-height: 20vh;
+  }
+
+  .header h1 {
+    color: rgb(139, 137, 137);
+    font-size: 2em;
+  }
+  .input input {
+    width: 60vw;
+    font-size: 25px;
+    color: whitesmoke;
+  }
+  .input input:focus {
+    caret-color: cornsilk;
+    outline: none;
+    border-bottom: 4px solid rgba(223, 219, 219, 0.438);
+   
+  }
+  .input button {
+    border: 4px solid rgba(0, 0, 0, 0.705);
+    background-color: transparent;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.705);
+    cursor: cell;
+  }
+  .input button:hover {
+    background-color: rgba(255, 255, 255, 0.239);
+  }
+  .input span {
+    border: 4px solid rgba(0, 0, 0, 0.849);
+    background-color: rgba(255, 255, 255, 0.507);
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+  section>div {
+    min-width: 40vw;
+    margin-bottom: 10px;
+  }
+}
+@media( max-width: 760px) and (orientation: landscape){
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    min-height: 22vh;
+  }
+
+  .header h1 {
+    color: rgb(139, 137, 137);
+    font-size: 2em;
+  }
+  .input input {
+    width: 60vw;
+    font-size: 25px;
+    color: whitesmoke;
+  }
+  .input input:focus {
+    caret-color: cornsilk;
+    outline: none;
+    border-bottom: 4px solid rgba(223, 219, 219, 0.438);
+  
+  }
+  .input button {
+    border: 4px solid rgba(0, 0, 0, 0.705);
+    background-color: transparent;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.705);
+    cursor: cell;
+  }
+  .input button:hover {
+    background-color: rgba(255, 255, 255, 0.239);
+  }
+  .input span {
+    border: 4px solid rgba(0, 0, 0, 0.849);
+    background-color: rgba(255, 255, 255, 0.507);
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+  section {
+    justify-content: space-around;
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-height: 60vh;
+  }
+  section>div {
+    min-width: 35vw;
+    margin-bottom: 10px;
+  }
+} */

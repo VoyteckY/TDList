@@ -1,21 +1,20 @@
- <div class="inside">
+ <div class="main">
   <!-- Tytuł -->
   <div class="title">
     <div class="number" style="background: rgba(93, 160, 102, 0.45);">
       {{doneList.length}}
     </div>
     <p>Done</p>
-    <div class="number clear" (click)="clear()" style="background: rgba(93, 160, 102, 0.45);">
+    <!-- <div class="number clear" (click)="clear()" style="background: rgba(93, 160, 102, 0.45);">
       <i class="fas fa-trash-alt"></i>
-    </div>
+    </div> -->
   </div>
 
   <!-- Lista -->
-  <div class="list">
-    <ul>
+    <ul class="list">
       <li class='LiDone' *ngFor="let task of doneList">
         {{task |upper}}
       </li>
     </ul>
-  </div>
+
 </div>
