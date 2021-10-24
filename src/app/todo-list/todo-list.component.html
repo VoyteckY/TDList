@@ -1,24 +1,21 @@
-<div class="container">
-  <div class="row">
-    <div class="toDo">
-      <div class="title">
-        <p>To do</p>
-        <div class="number" style="background: rgba(119, 244, 255, 0.45);">
-          {{toDoList.length}}
-        </div>
-      </div>
-      <ul>
-        <li *ngFor="let task of toDoList">
-          
-            <button (click)="active(task)" style="color: rgb(248, 145, 10);">
-              <i class="far fa-square"></i>
-            </button>{{task | upper}}
-          
-          <button (click)="removeToDo(task)">
-            <i class="fas fa-trash-alt"></i>
-          </button>
-        </li>
-      </ul>
-    </div>
+<div class="main">
+<!-- Tytuł -->
+<div class="title">
+  <div class="number" style="background: rgba(119, 244, 255, 0.45);">
+    {{toDoList.length}}
   </div>
+  <p>To do</p>
+</div>
+
+<!-- Lista -->
+<div class="list">
+  <ul>
+    <li *ngFor="let task of toDoList">
+      <button (click)="active(task)" style="color: rgb(248, 145, 10);"><i class="far fa-square"></i></button>
+      {{task | upper}}
+      <button (click)="removeToDo(task)"><i class="fas fa-trash-alt"></i></button>
+    </li>
+  </ul>
+</div>
+
 </div>

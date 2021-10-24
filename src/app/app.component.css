@@ -1,45 +1,29 @@
-h1 {
-  font-family: 'Amatic SC', cursive;
+.header {
   display: flex;
-  justify-content: center;
-  font-size: 100px;
-  font-weight: 600;
-  margin: 10px;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2vw;
+  min-height: 25vh;
+  font-family: 'Amatic SC', cursive;
+  color: rgba(0, 0, 0, 0.52);
+
 }
 
-li {
-  font-size: 35px;
-  font-family: 'Patrick Hand SC', cursive;
-}
-
-.color {
-  background: rgba(224, 195, 27, 0.601);
-  box-sizing: border-box;
-  border: 4px solid black;
-  margin-left: 3px;
-  width: 62px;
-  height: 62px;
-  box-shadow: 2px 2px 10px black;
-  justify-content: center;
-}
-
-.color:hover {
-  background: rgba(255, 217, 0, 0.835);
-  cursor: cell;
+.header h1 {
+  font-size: 5em;
+ 
 }
 
 .input {
-  margin: 20px;
-  padding: 20px;
   display: flex;
-  justify-content: center;
+  /* min-height: 50%; */
 }
 
 .input input {
-  box-sizing: border-box;
-  width: 30%;
+  width: 30vw;
   border: none;
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.705);
   background-color: transparent;
   font-size: 35px;
   cursor: cell;
@@ -54,9 +38,10 @@ li {
 }
 
 .input button {
-  border: 4px solid black;
+  border: 4px solid rgba(0, 0, 0, 0.705);
   background-color: transparent;
   font-size: 35px;
+  color: rgba(0, 0, 0, 0.705);
   cursor: cell;
 }
 
@@ -64,5 +49,26 @@ li {
   background-color: rgba(255, 255, 255, 0.239);
 }
 
+.input span {
+  border: 4px solid rgba(0, 0, 0, 0.849);
+  background-color: rgba(255, 255, 255, 0.507);
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+}
 
+/* SECTION MAIN */
+section{
+  /* background-color: wheat; */
+  min-height: 70vh;
+  display: flex;
+  justify-content: space-evenly;
+ align-items: center;
+}
 
+section>div {
+  background-color: rgba(236, 201, 85, 0.637);
+  min-width: 24vw;
+  color: rgba(255, 255, 255, 0.89);
+  height: 200px;
+}

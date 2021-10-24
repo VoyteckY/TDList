@@ -1,33 +1,36 @@
 <div class="wrap">
+  <div class="header">
 
-<!-- Nagłówek -->
-  <div>
     <h1>To Do List</h1>
-  </div>
 
-  <!-- Wprowadzanie zadania -->
-  <div class="input">
-    <input type="text" [(ngModel)]="inputText" (keyup.enter)="add()">
-    <button (click)="add()">Add </button>
-    <div class="color" (click)="color()"></div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-6 col-md-4"> <!-- sekcja Zadań TO DO -->
-        <app-todo-list [toDoList]="toDoList" (x)="removeToDo($event)" (z)="active($event)"></app-todo-list>
-      </div>
-
-      <div class="col-6 col-md-4"><!-- Sekcja zadań ACTIVE -->   
-        <app-active-list [activeList]="activeList" (q)="done($event)" (w)="removeActive($event)"></app-active-list>
-      </div>
-
-      <div class="col-6 col-md-4"><!-- Seckja zadań DONE -->
-        <app-done-list [doneList]="doneList" (e)="clear()"></app-done-list>
-      </div>
-      
+    <!-- Wprowadzanie zadania -->
+    <div class="input">
+      <input type="text" [(ngModel)]="inputText" (keyup.enter)="add()">
+      <button (click)="add()">Add</button>
+      <span class="color" (click)="color()"></span>
     </div>
-    
+
   </div>
 
+  <!-- Część główna -->
+  <section class="main">
+    
+    <!-- sekcja Zadań TO DO -->
+    <!-- <div class="toDo">
+      <app-todo-list [toDoList]="toDoList" (x)="removeToDo($event)" (z)="active($event)">
+      </app-todo-list>
+    </div> -->
+
+    <!-- Sekcja zadań ACTIVE -->
+    <!-- <div class="active">
+      <app-active-list [activeList]="activeList" (q)="done($event)" (w)="removeActive($event)"></app-active-list>
+    </div> -->
+
+    <!-- Seckja zadań DONE -->
+    <div class="done">
+      <app-done-list [doneList]="doneList" (e)="clear()"></app-done-list>
+    </div>
+
+  </section>
+ 
 </div>
