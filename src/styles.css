@@ -9,6 +9,10 @@ body{
     background-image: url(src/assets/img/black_1920.jpg);
     font-family: 'Patrick Hand SC', cursive;
 }
-.alert{
-    
+
+@media (min-width: 1981px){
+    body{
+        background-image: url(src/assets/img/black_2366.jpg);
+      background-size: cover;
+    }
 }

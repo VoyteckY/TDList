@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 81%;
+  min-width: 75%;
   display: flex;
   font-size: 60px;
   margin-bottom: 10px;
@@ -41,7 +41,7 @@
   display: flex;
   justify-content: space-around;
   margin: 3px;
-  width: 100%;
+  width: 80%;
 }
 
 .list li .check,
@@ -63,8 +63,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 73%;
-  min-width: 73%;
+  align-items:left;
+  width: 73%;
+
 }
